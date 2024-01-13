@@ -12,14 +12,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Add Food', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar(props) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const {logoName} = props
+    const { logoName } = props
+    const navigate = useNavigate()
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -36,8 +38,15 @@ function Navbar(props) {
         setAnchorElUser(null);
     };
 
+    const handlePageClick = (page) => {
+        if (page === 'Add Food') {
+            navigate('/addfood');
+        }
+        handleCloseNavMenu();
+    }
+
     return (
-        <AppBar position="static" sx={{ background: '#222601'}}>
+        <AppBar position="static" sx={{ background: '#222601' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -95,13 +104,16 @@ function Navbar(props) {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem
+                                    key={page}
+                                    onClick={() => { handlePageClick(page) }}
+                                >
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                   
+
                     <Typography
                         variant="h5"
                         noWrap
@@ -120,12 +132,12 @@ function Navbar(props) {
                     >
                         LOGO
                     </Typography>
-                    
+
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => { handlePageClick(page) }}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
