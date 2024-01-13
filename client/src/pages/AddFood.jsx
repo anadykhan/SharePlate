@@ -18,6 +18,20 @@ const AddFood = () => {
     const handleForm = (event) => {
         event.preventDefault()
 
+        const form = event.target;
+
+        const name = form.name.value
+        const image = form.image.value
+        const quantity = form.quantity.value
+        const address = form.address.value 
+        const date = form.date.value 
+        const notes = form.notes.value
+        const donorName = form.donorName.value
+        const donorEmail = form.donorEmail.value
+        const donorImage = form.donorImage.value
+        const status = form.status.value
+
+        //console.log(name, image, quantity, address, date, notes, donorName, donorEmail, donorImage, status)
     }
 
     return (
@@ -28,12 +42,14 @@ const AddFood = () => {
                     label="Food Name"
                     variant="outlined"
                     sx={textInputStyle}
+                    name="name"
                 />
                 <TextField
                     id="outlined-basic"
                     label="Food Image"
                     variant="outlined"
                     sx={textInputStyle}
+                    name="image"
                 />
                 <TextField
                     id="outlined-number"
@@ -43,12 +59,14 @@ const AddFood = () => {
                         shrink: true,
                     }}
                     sx={textInputStyle}
+                    name="quantity"
                 />
                 <TextField
                     id="outlined-basic"
                     label="Pick Up Address"
                     variant="outlined"
                     sx={textInputStyle}
+                    name="address"
                 />
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
@@ -58,6 +76,7 @@ const AddFood = () => {
                         onChange={(date) => handleDateChange(date)}
                         renderInput={(params) => <TextField {...params} variant="outlined" />}
                         sx={textInputStyle}
+                        name="date"
                     />
                 </LocalizationProvider>
                 <TextField
@@ -65,6 +84,33 @@ const AddFood = () => {
                     label="Additional Notes"
                     variant="outlined"
                     sx={textInputStyle}
+                    name="notes"
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Donator Name"
+                    variant="outlined"
+                    value ='Donator name'
+                    inputProps={
+                        {
+                            readOnly: true,
+                        }
+                    }
+                    sx={textInputStyle}
+                    name="donorName"
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Donator email"
+                    variant="outlined"
+                    value = 'Donator email'
+                    inputProps={
+                        {
+                            readOnly: true,
+                        }
+                    }
+                    sx={textInputStyle}
+                    name="donorEmail"
                 />
                 <TextField
                     id="outlined-basic"
@@ -77,6 +123,7 @@ const AddFood = () => {
                         }
                     }
                     sx={textInputStyle}
+                    name="donorImage"
                 />
                 <TextField
                     id="outlined-basic"
@@ -89,10 +136,12 @@ const AddFood = () => {
                         }
                     }
                     sx={textInputStyle}
+                    name="status"
                 />
                 <Button
                     variant="contained"
                     sx={buttonStyle}
+                    type="submit"
                 >Share</Button>
             </form>
         </div>
