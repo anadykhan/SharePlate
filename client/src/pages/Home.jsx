@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import FoodCard from "../components/FoodCard"
 
 const Home = () => {
     return (
@@ -6,6 +7,7 @@ const Home = () => {
         className=""
         >
             <Banner></Banner>
+            <FoodCard></FoodCard>
         </div>
     )
 }

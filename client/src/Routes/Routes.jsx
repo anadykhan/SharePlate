@@ -16,7 +16,7 @@ const router = createBrowserRouter([
 
             },
             {
-                path: '/addfood',
+                path: '/donatefood',
                 element: <AddFood></AddFood>
             }
         ]

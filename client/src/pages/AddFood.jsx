@@ -9,10 +9,10 @@ const AddFood = () => {
 
     const buttonStyle = {
         width: '9rem',
-        background: '#7c8c0f'
+        background: '#7c8c0f',
     }
     const textInputStyle = {
-        width: '100%'
+        width: '100%',
     }
 
     const handleForm = (event) => {
@@ -36,7 +36,7 @@ const AddFood = () => {
 
     return (
         <div>
-            <form action="" onSubmit={handleForm} className="flex flex-col gap-5 items-center p-10">
+            <form action="" onSubmit={handleForm} className="flex flex-col gap-5 items-center p-10 lg:px-52">
                 <TextField
                     id="outlined-basic"
                     label="Food Name"
