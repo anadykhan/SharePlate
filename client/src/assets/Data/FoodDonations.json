@@ -11,7 +11,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the first food donation. It includes Food Name 1 and is available for pickup at Address 1 on the specified date. Donated by Donator Name 1.",
-    "loves": 15
+    "loves": 15,
+    "rating": 3
   },
   {
     "name": "Food Name 2",
@@ -25,7 +26,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the second food donation. It includes Food Name 2 and is available for pickup at Address 2 on the specified date. Donated by Donator Name 2.",
-    "loves": 8
+    "loves": 8,
+    "rating": 3
   },
   {
     "name": "Food Name 3",
@@ -39,7 +41,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the third food donation. It includes Food Name 3 and is available for pickup at Address 3 on the specified date. Donated by Donator Name 3.",
-    "loves": 20
+    "loves": 20,
+    "rating": 3
   },
   {
     "name": "Food Name 4",
@@ -53,7 +56,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the fourth food donation. It includes Food Name 4 and is available for pickup at Address 4 on the specified date. Donated by Donator Name 4.",
-    "loves": 12
+    "loves": 12,
+    "rating": 3
   },
   {
     "name": "Food Name 5",
@@ -67,7 +71,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the fifth food donation. It includes Food Name 5 and is available for pickup at Address 5 on the specified date. Donated by Donator Name 5.",
-    "loves": 18
+    "loves": 18,
+    "rating": 3
   },
   {
     "name": "Food Name 6",
@@ -81,7 +86,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the sixth food donation. It includes Food Name 6 and is available for pickup at Address 6 on the specified date. Donated by Donator Name 6.",
-    "loves": 5
+    "loves": 5,
+    "rating": 3
   },
   {
     "name": "Food Name 7",
@@ -95,7 +101,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the seventh food donation. It includes Food Name 7 and is available for pickup at Address 7 on the specified date. Donated by Donator Name 7.",
-    "loves": 10
+    "loves": 10,
+    "rating": 3
   },
   {
     "name": "Food Name 8",
@@ -109,7 +116,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the eighth food donation. It includes Food Name 8 and is available for pickup at Address 8 on the specified date. Donated by Donator Name 8.",
-    "loves": 25
+    "loves": 25,
+    "rating": 3
   },
   {
     "name": "Food Name 9",
@@ -123,7 +131,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the ninth food donation. It includes Food Name 9 and is available for pickup at Address 9 on the specified date. Donated by Donator Name 9.",
-    "loves": 14
+    "loves": 14,
+    "rating": 3
   },
   {
     "name": "Food Name 10",
@@ -137,6 +146,7 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the tenth food donation. It includes Food Name 10 and is available for pickup at Address 10 on the specified date. Donated by Donator Name 10.",
-    "loves": 30
+    "loves": 30,
+    "rating": 3
   }
 ]

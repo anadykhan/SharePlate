@@ -11,7 +11,8 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the first food donation. It includes Food Name 1 and is available for pickup at Address 1 on the specified date. Donated by Donator Name 1.",
-    "loves": 15
+    "loves": 15,
+    "rating": 3
   },
   {
     "name": "Food Name 2",
@@ -25,6 +26,7 @@
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
     "status": "Available",
     "description": "This is the second food donation. It includes Food Name 2 and is available for pickup at Address 2 on the specified date. Donated by Donator Name 2.",
-    "loves": 8
+    "loves": 8,
+    "rating": 3
   }
 ]
