@@ -9,7 +9,9 @@
     "donorName": "Donator Name 1",
     "donorEmail": "donator1@example.com",
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
-    "status": "Available"
+    "status": "Available",
+    "description": "This is the first food donation. It includes Food Name 1 and is available for pickup at Address 1 on the specified date. Donated by Donator Name 1.",
+    "loves": 15
   },
   {
     "name": "Food Name 2",
@@ -21,18 +23,8 @@
     "donorName": "Donator Name 2",
     "donorEmail": "donator2@example.com",
     "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
-    "status": "Available"
-  },
-  {
-    "name": "Food Name 3",
-    "image": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
-    "quantity": 7,
-    "address": "Pick Up Address 3",
-    "date": "1/10/24",
-    "notes": "Additional Notes 3",
-    "donorName": "Donator Name 3",
-    "donorEmail": "donator3@example.com",
-    "donorImage": "https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg",
-    "status": "Available"
+    "status": "Available",
+    "description": "This is the second food donation. It includes Food Name 2 and is available for pickup at Address 2 on the specified date. Donated by Donator Name 2.",
+    "loves": 8
   }
 ]

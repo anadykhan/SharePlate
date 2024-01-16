@@ -2,4 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: jost-regular;
+    src: url(/src/assets/Fonts/Jost/Jost-Regular.ttf);
+}
+
+.jost-regular {
+    font-family: jost-regular;
+}

@@ -4,6 +4,8 @@ import {
 import Home from "../pages/Home";
 import Root from "../pages/Root";
 import AddFood from "../pages/AddFood";
+import AvailableFoods from "../pages/AvailableFoods";
+import SingleFood from "../pages/SingleFood";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
             {
                 path: '/donatefood',
                 element: <AddFood></AddFood>
+            },
+            {
+                path: '/availablefoods',
+                element: <AvailableFoods></AvailableFoods>
+            },
+            {
+                path: '/singlefood',
+                element: <SingleFood></SingleFood>
             }
         ]
     },

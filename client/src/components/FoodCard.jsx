@@ -10,50 +10,48 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
-export default function FoodCard(props) {
+export default function FoodCard (props) {
 
-    const {name, donorName, expire, notes, likes} = props
+    const {title, donorName, expire, notes, likes, description, loves, image} = props
 
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
+                        {donorName}
                     </Avatar>
                 }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
+                title={donorName}
+                subheader={expire}
             />
             <CardMedia
                 component="img"
                 height="194"
-                image="https://i.ibb.co/nkzjdJm/tyson-Xg-A9-Pq-VK0a8-unsplash.jpg"
+                image={image}
                 alt="Paella dish"
             />
             <CardContent>
+                <Typography variant='h6'>
+                    {title}
+                </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    This impressive paella is a perfect party dish and a fun meal to cook
-                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                    if you like.
+                    {description}
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing>
+            <CardActions sx={{ gap: '6rem', display: { md: { gap: '2rem' } } }}>
+                <Box sx={{display: 'flex', alignItems: 'center'}}>
                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>
                 <Typography>
-                    3 Likes
+                    {loves} Likes
                 </Typography>
-                <Button sx={{paddingLeft: '7rem'}}>
+
+                </Box>
+                <Button sx={{ background: '#7c8c0f', color: 'white'}}>
                     Learn More
                 </Button>
             </CardActions>
