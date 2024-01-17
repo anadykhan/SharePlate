@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import { useGetFoodDonations } from "../hooks/Hooks"
 import { Button } from "@mui/material"
-import FoodCard from "../components/FoodCard"
+import AvailableFoodDonationCard from "../components/AvailableFoodDonationCard"
+import SearchBox from "../components/SearchBox"
 
 const AvailableFoods = () => {
 
-    const [quantity, setQuantity] = useState(9)
+    const [quantity, setQuantity] = useState(6)
     const [limitedFoodDonationData, setLimitedFoodDonationData] = useState([])
     const [limitedFoodDonationDataLoading, setLimitedFoodDonationDataLoading] = useState(true)
 
-    const {data: FoodDonationsData, isLoading: FoodDonationsDataLoading} = useGetFoodDonations()
+    const { data: FoodDonationsData, isLoading: FoodDonationsDataLoading } = useGetFoodDonations()
 
-    
+
 
     useEffect(() => {
         setLimitedFoodDonationDataLoading(true)
@@ -25,30 +26,42 @@ const AvailableFoods = () => {
         return <h1>Loading...</h1>
     }
 
-  return (
-    <div className="flex flex-col items-center gap-10 lg:grid lg:grid-cols-3 lg:p-10">
-        {
-              limitedFoodDonationData.map((data, index) => {
-                  //console.log(data)
-                  return (
-                      <FoodCard
-                          key={index}
-                          title={data.name}
-                          expire={data.date}
-                          donorName={data.donorName}
-                          image={data.image}
-                          description={data.description}
-                          loves={data.loves}
-                      ></FoodCard>
-                  )
-              })
-        }
-        <Button
-        onClick={() => {setQuantity(10)}}
-        >
-            Load More
-        </Button>
-    </div>
-  )
+    const buttonStyle = {
+        background: '#e8b941',
+        width: 200,
+        color: 'white',
+        borderRadius: 0,
+        padding: 2
+    }
+
+    return (
+        <div className="flex flex-col items-center p-10 gap-10 lg:flex-row-reverse lg:justify-between lg:items-start lg:p-5">
+            <div className="flex flex-col justify-center items-center gap-10">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-10">
+                    {
+                        limitedFoodDonationData.map((data, index) => {
+                            //console.log(data)
+                            return (
+                                <AvailableFoodDonationCard
+                                    key={index}
+                                    title={data.name}
+                                    expire={data.date}
+                                ></AvailableFoodDonationCard>
+                            )
+                        })
+                    }
+                </div>
+                <Button
+                    sx={buttonStyle}
+                    onClick={() => { setQuantity(10) }}
+                >
+                    Load More
+                </Button>
+            </div>
+            <div className="w-full lg:w-[16rem]">
+                <SearchBox></SearchBox>
+            </div>
+        </div>
+    )
 }
 export default AvailableFoods

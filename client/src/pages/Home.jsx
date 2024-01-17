@@ -1,6 +1,5 @@
 import Banner from "../components/Banner"
 import FeaturedFoodDonationsCard from "../components/FeaturedFoodDonationsCard"
-import FoodCard from "../components/FoodCard"
 import { useGetDistricts } from "../hooks/Hooks"
 
 const Home = () => {

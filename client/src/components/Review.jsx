@@ -37,7 +37,12 @@ const Review = () => {
                 gap: 1
               }}
             >
-              <Typography>John Doe</Typography>
+              <Typography
+              sx={{
+                fontWeight: 800
+              }}
+              >
+                John Doe</Typography>
               -
               <Typography>1.1.2012</Typography>
             </Box>

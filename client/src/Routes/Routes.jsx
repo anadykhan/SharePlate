@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Root from "../pages/Root";
 import AddFood from "../pages/AddFood";
 import AvailableFoods from "../pages/AvailableFoods";
-import SingleFood from "../pages/SingleFood";
+import SingleFood from "../pages/SingleFoodDonation";
 
 const router = createBrowserRouter([
     {
