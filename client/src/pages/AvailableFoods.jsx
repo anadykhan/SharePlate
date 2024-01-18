@@ -3,6 +3,7 @@ import { useGetFoodDonations } from "../hooks/Hooks"
 import { Button } from "@mui/material"
 import AvailableFoodDonationCard from "../components/AvailableFoodDonationCard"
 import SearchBox from "../components/SearchBox"
+import CategoryCard from "../components/CategoryCard"
 
 const AvailableFoods = () => {
 
@@ -60,6 +61,7 @@ const AvailableFoods = () => {
             </div>
             <div className="w-full lg:w-[16rem]">
                 <SearchBox></SearchBox>
+                <CategoryCard></CategoryCard>
             </div>
         </div>
     )
