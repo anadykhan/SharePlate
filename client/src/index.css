@@ -3,10 +3,69 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: jost-regular;
-    src: url(/src/assets/Fonts/Jost/Jost-Regular.ttf);
+    font-family: 'Jost';
+    font-weight: 100;
+    src: url('/src/assets/Fonts/Jost/Jost\ Thin.woff2') format('woff2'),
+    url('/src/assets/Fonts/Jost/Jost\ Thin.woff') format('woff');
 }
 
-.jost-regular {
-    font-family: jost-regular;
+@font-face {
+    font-family: 'Jost';
+    font-weight: 200;
+    src: url('/src/assets/Fonts/Jost/Jost ExtraLight.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 300;
+    src: url('/src/assets/Fonts/Jost/Jost Light.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 400;
+    src: url('/src/assets/Fonts/Jost/Jost Medium.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 500;
+    src: url('/src/assets/Fonts/Jost/Jost Regular.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 600;
+    src: url('/src/assets/Fonts/Jost/Jost SemiBold.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 700;
+    src: url('/src/assets/Fonts/Jost/Jost Bold.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 800;
+    src: url('/src/assets/Fonts/Jost/Jost ExtraBold.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-weight: 900;
+    src: url('/src/assets/Fonts/Jost/Jost Black.woff2') format('woff2'),
+        url('/src/assets/Fonts/Jost/Jost Black.woff') format('woff');
+}
+
+
+*{
+    font-family: 'Jost' !important;
 }

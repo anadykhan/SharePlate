@@ -59,6 +59,7 @@ const FeaturedFoodDonationsCard = (props) => {
                     sx={{
                         color: 'white',
                         fontSize: 13,
+                        fontWeight: 500
                     }}
                     >
                         Read More <ArrowRightAltOutlinedIcon/>

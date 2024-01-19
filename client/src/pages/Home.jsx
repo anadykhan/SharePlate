@@ -1,4 +1,4 @@
-import Banner from "../components/Banner"
+import BannerHome from "../components/BannerHome"
 import FeaturedFoodDonationsCard from "../components/FeaturedFoodDonationsCard"
 import { useGetDistricts } from "../hooks/Hooks"
 
@@ -16,8 +16,8 @@ const Home = () => {
         <div
             className="flex flex-col items-center"
         >
-            <Banner></Banner>
-            <div className="flex flex-col lg:flex-row gap-10 lg:p-10">
+            <BannerHome></BannerHome>
+            <div className="w-full h-[100rem] p-5 flex flex-col gap-10 bg-cover justify-end items-center bg-[url('https://i.ibb.co/wKj43Bv/Untitled-design.jpg')] bg-no-repeat lg:h-[55rem] lg:flex-row lg:items-end lg:bg-repeat lg:bg-contain lg:justify-center">
                 {
                     FeaturedFoodDonationData.data.map((data, index) => {
                         console.log(data)

@@ -121,7 +121,7 @@ const SingleFoodDonationCard = () => {
                             </Box>
                         </Box>
                         <Typography>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque in! Recusandae inventore provident perspiciatis vel fugiat minima nostrum, quaerat eveniet quos placeat ad accusantium laborum ab distinctio sint ullam!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque in! Recusandae inventore provident perspiciatis vel fugiat minima nostrum.
                         </Typography>
                         <Box
                             sx={{
@@ -150,7 +150,7 @@ const SingleFoodDonationCard = () => {
                                     background: '#e8b941',
                                     color: 'white',
                                     borderRadius: 0,
-                                    padding: 2
+                                    padding: 2,
                                 }}
                             >
                                 Request Donation

@@ -20,7 +20,6 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function Navbar(props) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const { logoName } = props
     const navigate = useNavigate()
 
     const handleOpenNavMenu = (event) => {
@@ -55,10 +54,9 @@ function Navbar(props) {
     }
 
     return (
-        <AppBar position="static" sx={{ background: '#222601' }}>
+        <AppBar position="static" sx={{ background: '#FFFFFF', color: 'black', boxShadow: 0}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -74,7 +72,7 @@ function Navbar(props) {
                             textDecoration: 'none',
                         }}
                     >
-                        {logoName}
+                        LOGO
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -86,9 +84,7 @@ function Navbar(props) {
                             onClick={handleOpenNavMenu}
                             color="inherit"
                             sx={{
-                                background: '#7c8c0f',
-                                padding: '0.3rem',
-                                borderRadius: '2px'
+                                color:'black',
                             }}
                         >
                             <MenuIcon />
@@ -110,6 +106,7 @@ function Navbar(props) {
                             sx={{
                                 display: { xs: 'block', md: 'none' },
                                 width: '100%',
+                                color: '#000000'
                             }}
                         >
                             {pages.map((page) => (
@@ -147,7 +144,7 @@ function Navbar(props) {
                             <Button
                                 key={page}
                                 onClick={() => { handlePageClick(page) }}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
                             >
                                 {page}
                             </Button>
