@@ -11,3 +11,45 @@ export const FeaturedCardVariant = {
         }
     }
 }
+
+export const BannerUpperTitleVariants = {
+    hidden: { 
+        x: -500 
+    },
+    visible: { 
+        x: 0, 
+        transition: { 
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.2
+        } 
+    },
+};
+
+export const BannerTitleVariants = {
+    hidden: { 
+        x: -500 
+    },
+    visible: { 
+        x: 0, 
+        transition: { 
+            duration: 0.5, 
+            delay: 0.5,
+            ease: "easeOut"
+        } 
+    },
+};
+
+export const BannerSubtitleVariants = {
+    hidden: {
+        x: -500
+    },
+    visible: {
+        x: 0,
+        transition: {
+            duration: 0.5,
+            delay: 0.8,
+            ease: "easeOut"
+        }
+    },
+};
