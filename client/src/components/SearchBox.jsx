@@ -8,12 +8,12 @@ const SearchBox = () => {
         setSearch(event.target.value);
     }
   return (
-      <div className="h-[12rem] w-full bg-[#FFFF00] flex justify-center items-center px-7">
+    <div className="h-[12rem] w-full bg-[#eabd4e] flex justify-center items-center px-7">
           <form className="flex flex-col gap-5 w-full">
             <div className="text-3xl">Search</div>
             <input 
             type="text" 
-            className="focus:outline-none w-ful h-[4rem] p-5"
+            className="focus:outline-none w-ful h-[4rem] p-5 font-light"
             placeholder="Search for your Donation" 
             name="search"
             onChange={handleOnChange}

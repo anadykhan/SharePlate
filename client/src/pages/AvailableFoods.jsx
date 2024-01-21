@@ -6,6 +6,7 @@ import SearchBox from "../components/SearchBox"
 import CategoryCard from "../components/CategoryCard"
 import { motion } from 'framer-motion';
 import BannerShared from "../components/BannerShared"
+import SelectInput from "../components/SelectInput"
 
 const AvailableFoods = () => {
 
@@ -44,8 +45,11 @@ const AvailableFoods = () => {
                 title = 'Donation List'
                 ></BannerShared>
             </div>
-            <div className="flex flex-col items-center p-10 gap-10 lg:flex-row-reverse lg:justify-between lg:items-start lg:p-5">
-                <div className="flex flex-col justify-center items-center gap-10">
+            <div className="flex flex-col items-center p-10 gap-10 lg:flex-row-reverse lg:justify-between lg:items-start lg:p-5 lg:pt-20">
+                <div className="flex flex-col justify-center items-center gap-16">
+                    <div className="w-full flex justify-end">
+                        <SelectInput></SelectInput>
+                    </div>
                     <div className="lg:grid lg:grid-cols-2 lg:gap-10">
                         {
                             limitedFoodDonationData.map((data, index) => {

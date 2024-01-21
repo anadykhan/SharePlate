@@ -5,6 +5,7 @@ import { useGetDistricts } from "../hooks/Hooks"
 import { motion } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import Questions from "../components/Questions"
+import { Typography } from "@mui/material"
 
 const Home = () => {
     const [ref, inView] = useInView({
@@ -26,9 +27,12 @@ const Home = () => {
             <BannerHome></BannerHome>
             <div className="w-full flex flex-col bg-cover justify-end items-center bg-no-repeat lg:h-[60rem] lg:bg-repeat lg:bg-contain lg:justify-center lg:items-center">
                 <div className="flex flex-col w-full h-[95rem] items-center justify-end gap-10 bg-[url('https://i.ibb.co/wKj43Bv/Untitled-design.jpg')] bg-cover lg:flex-col lg:h-[49rem] lg:bg-contain">
-                    <div className="text-white text-6xl text-center ">
+                    <Typography
+                        fontSize={60}
+                        color='#FFFFFF'
+                    >
                         Loved Donations
-                    </div>
+                    </Typography>
                     <div className="flex flex-col gap-12 lg:flex-row">
                         {
                             FeaturedFoodDonationData.data.map((data, index) => {
@@ -47,9 +51,12 @@ const Home = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-5 px-5">
-                <div className="text-4xl lg:text-6xl">
+                <Typography
+                    fontSize={60}
+                    color='#000000'
+                >
                     Frequently asked questions
-                </div>
+                </Typography>
                 <div>
                     <Questions
                         question='What is food donation?'

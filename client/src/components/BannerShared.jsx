@@ -3,7 +3,7 @@ import { Box } from "@mui/system"
 
 const BannerShared = (props) => {
     const {title} = props
-    
+
     return (
         <div>
             <Box
@@ -22,7 +22,7 @@ const BannerShared = (props) => {
                 fontSize={60}
                 fontWeight={600}
                 >
-                    Donation List
+                     {title}
                 </Typography>
             </Box>
         </div>

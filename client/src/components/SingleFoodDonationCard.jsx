@@ -65,7 +65,9 @@ const SingleFoodDonationCard = () => {
                             <Typography
                                 sx={{
                                     width: '50%',
-                                    textAlign: 'center'
+                                    textAlign: 'center',
+                                    fontWeight: 300,
+                                    color: '#649013'
                                 }}
                             >
                                 Will expire in 3.3.32
@@ -80,7 +82,9 @@ const SingleFoodDonationCard = () => {
                                 }}
                             >
                                 <LocationOnIcon />
-                                <Typography>
+                                <Typography
+                                fontWeight={300}
+                                >
                                     43A, London Bridge, United Kingdom
                                 </Typography>
                             </Box>
@@ -120,7 +124,9 @@ const SingleFoodDonationCard = () => {
                                 <Chip label="Available" color="success" />
                             </Box>
                         </Box>
-                        <Typography>
+                        <Typography
+                        fontWeight={300}
+                        >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque in! Recusandae inventore provident perspiciatis vel fugiat minima nostrum.
                         </Typography>
                         <Box

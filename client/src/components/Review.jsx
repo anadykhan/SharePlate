@@ -10,7 +10,7 @@ const Review = () => {
       <Box
       sx={{
         display: 'flex',
-        gap: 2
+        gap: 2  
       }}
       >
         <Avatar sx={{
@@ -44,9 +44,13 @@ const Review = () => {
               >
                 John Doe</Typography>
               -
-              <Typography>1.1.2012</Typography>
+              <Typography
+              fontWeight={300}
+              >1.1.2012</Typography>
             </Box>
-            <Typography>
+            <Typography
+            fontWeight={300}
+            >
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab facilis, eligendi vel molestias quae beatae reprehenderit temporibus, fugiat quo doloremque expedita provident consequatur, eum ut omnis? At nam voluptates aperiam.
             </Typography>
           </Box>
