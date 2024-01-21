@@ -50,11 +50,16 @@ const AvailableFoodDonationCard = (props) => {
                         align="center"
                         sx={{
                                 color: '#649013',
+                                fontWeight: 300
                         }}
                         >
                             Expires in
                         </Typography>
-                        <Typography>
+                        <Typography
+                        sx={{
+                                fontWeight: 300
+                        }}
+                        >
                             {expire}
                         </Typography>
                     </Box>
