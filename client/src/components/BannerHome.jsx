@@ -4,29 +4,6 @@ import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 
 const BannerHome = () => {
-
-  const [animationState, setAnimationState] = useState("hidden");
-  const location = useLocation();
-
-  //Fully animation related
-  useEffect(() => {
-    const handleLoad = () => {
-      setAnimationState("visible");
-    };
-
-    window.onload = handleLoad;
-
-    return () => {
-      window.onload = null;
-    };
-  }, []);
-
-  useEffect(() => {
-    // Reset animation state when the route changes
-    setAnimationState("visible");
-  }, [location.pathname]);
-
-
   return (
     <motion.div
       className="w-full h-[20rem] lg:h-auto relative"
@@ -40,19 +17,19 @@ const BannerHome = () => {
           className="text-3xl font-serif text-[#e8b941] lg:text-6xl"
           variants={BannerUpperTitleVariants}
           initial="hidden"
-          animate={animationState}
+          animate= "visible"
         >Donating</motion.div>
         <motion.div
           className="text-5xl lg:text-8xl"
           variants={BannerTitleVariants}
           initial="hidden"
-          animate={animationState}
+          animate="visible"
         >FOOD TOGETHER</motion.div>
         <motion.div
           className="font-light"
           variants={BannerSubtitleVariants}
           initial="hidden"
-          animate={animationState}
+          animate="visible"
         >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet blanditiis</motion.div>
       </motion.div>
 
