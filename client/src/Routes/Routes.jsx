@@ -6,6 +6,8 @@ import Root from "../pages/Root";
 import AddFood from "../pages/AddFood";
 import AvailableFoods from "../pages/AvailableFoods";
 import SingleFood from "../pages/SingleFoodDonation";
+import RequestedDonations from "../pages/RequestedDonations";
+import MyDonations from "../pages/MyDonations";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
             {
                 path: '/singlefood',
                 element: <SingleFood></SingleFood>
+            },
+            {
+                path: '/requesteddonations',
+                element: <RequestedDonations></RequestedDonations>
+            },
+            {
+                path: '/mydonations',
+                element: <MyDonations></MyDonations>
             }
         ]
     },

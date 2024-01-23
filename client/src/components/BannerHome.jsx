@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { BannerUpperTitleVariants, BannerTitleVariants, BannerSubtitleVariants } from "../animation/Variants"
-import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
 
 const BannerHome = () => {
   return (

@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['Home', 'Donate Food', 'Blog', 'Available Foods', 'Single Food'];
+const pages = ['Home', 'Donate Food', 'Blog', 'Available Foods', 'Single Food', 'Requested Donations', 'My Donations'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar(props) {
@@ -49,6 +49,12 @@ function Navbar(props) {
         }
         else if (page === 'Single Food'){
             navigate('/singlefood')
+        }
+        else if (page === 'Requested Donations'){
+            navigate('/requesteddonations')
+        }
+        else if (page === 'My Donations') {
+            navigate('/mydonations')
         }
         handleCloseNavMenu();
     }

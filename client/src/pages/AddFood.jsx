@@ -3,6 +3,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from "react";
+import BannerShared from "../components/BannerShared"
 
 const AddFood = () => {
     const [selectedDate, handleDateChange] = useState(null);
@@ -36,6 +37,9 @@ const AddFood = () => {
 
     return (
         <div>
+            <BannerShared
+            title = "Add a Donation"
+            ></BannerShared>
             <form action="" onSubmit={handleForm} className="flex flex-col gap-5 items-center p-10 lg:px-52">
                 <TextField
                     id="outlined-basic"
