@@ -8,7 +8,7 @@ import BannerShared from "../components/BannerShared"
 const SingleFoodDonation = () => {
 
   return (
-    <div className="flex flex-col gap-20 p-5 lg:px-10">
+    <div className="flex flex-col gap-20 lg:px-10">
       <BannerShared
         title='Donation Detail'
       ></BannerShared>
