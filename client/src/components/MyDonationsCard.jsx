@@ -1,13 +1,29 @@
 import { Badge, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
+import { offHoverCardAnimation, onHoverCardAnimation } from "../animation/MyDonationCardAnimation"
 
 const MyDonationsCard = (props) => {
 
+    const [scope, animate] = useAnimate()
+
     const { imageSrc, title, subtitle, badgeContent } = props
 
+    const handleMouseEnter = () => {
+        console.log('working')
+        animate("#card", onHoverCardAnimation.animate, onHoverCardAnimation.transition)
+    }
+
+    const handleMouseLeave = () => {
+        console.log('Working mouse leave')
+        animate("#card", offHoverCardAnimation.animate, offHoverCardAnimation.transition)
+    }
+
     return (
-        <div>
+        <div
+            ref={scope}
+        >
             <Card
+                id="card"
                 sx={{
                     display: 'flex',
                     height: '10rem',
@@ -15,6 +31,8 @@ const MyDonationsCard = (props) => {
                     boxShadow: 'none',
                     alignItems: 'center'
                 }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 <CardMedia
                     component="img"

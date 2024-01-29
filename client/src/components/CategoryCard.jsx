@@ -1,6 +1,14 @@
 import { Typography } from "@mui/material"
+import { Box } from "@mui/system"
+import { useAnimate } from "framer-motion"
 
-const CategoryCard = () => {
+const CategoryCard = (props) => {
+
+  const [scope, animate] = useAnimate()
+
+
+
+  const {title} = props
   return (
     <div>
         <Typography
@@ -12,7 +20,11 @@ const CategoryCard = () => {
             fontWeight: 300
         }}
         >
-            Agriculture
+          <Box
+          id = "title"
+          >
+            {title}
+          </Box>
         </Typography>
     </div>
   )

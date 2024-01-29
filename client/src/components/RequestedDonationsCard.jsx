@@ -1,20 +1,39 @@
 import { Badge, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
+import { useAnimate } from "framer-motion"
+import { offHoverCardAnimation, onHoverCardAnimation } from "../animation/RequestCardHoverAnimation"
 
 const RequestedDonationsCard = (props) => {
 
+    const [scope, animate] = useAnimate()
+
     const { imageSrc, title, subtitle, badgeContent } = props
 
+    const handleMouseEnter = () => {
+        console.log('working')
+        animate("#card", onHoverCardAnimation.animate, onHoverCardAnimation.transition)
+    }
+
+    const handleMouseLeave = () => {
+        console.log('Working mouse leave')
+        animate("#card", offHoverCardAnimation.animate, offHoverCardAnimation.transition)
+    }
+
     return (
-        <div>
+        <div
+            ref={scope}
+        >
             <Card
+                id="card"
                 sx={{
                     display: 'flex',
                     height: '10rem',
                     width: '100%',
                     boxShadow: 'none',
-                    alignItems: 'center'
+                    alignItems: 'center',
                 }}
+                onMouseEnter = {handleMouseEnter}
+                onMouseLeave = {handleMouseLeave}
             >
                 <CardMedia
                     component="img"
@@ -50,9 +69,9 @@ const RequestedDonationsCard = (props) => {
                         <Chip label="Available" color="success" />
                     </Box>
                     <Typography
-                    sx={{
-                        fontWeight: 300
-                    }}
+                        sx={{
+                            fontWeight: 300
+                        }}
                     >
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque laudantium veniam nobis doloribus eius adipisci iusto iste aliquam. Dignissimos, quae?
                     </Typography>

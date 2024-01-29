@@ -7,12 +7,15 @@ import CategoryCard from "../components/CategoryCard"
 import { motion } from 'framer-motion';
 import BannerShared from "../components/BannerShared"
 import SelectInput from "../components/SelectInput"
+import { ButtonHover } from "../animation/Variants"
+import NumberOfData from "../components/NumberOfData"
 
 const AvailableFoods = () => {
 
     const [quantity, setQuantity] = useState(6)
     const [limitedFoodDonationData, setLimitedFoodDonationData] = useState([])
     const [limitedFoodDonationDataLoading, setLimitedFoodDonationDataLoading] = useState(true)
+    const categories = ["Available", "Canceled", "Booked", "Most Liked"] 
 
     const { data: FoodDonationsData, isLoading: FoodDonationsDataLoading } = useGetFoodDonations()
 
@@ -47,7 +50,8 @@ const AvailableFoods = () => {
             </div>
             <div className="flex flex-col items-center p-10 gap-10 lg:flex-row-reverse lg:justify-between lg:items-start lg:p-5 lg:pt-20">
                 <div className="flex flex-col justify-center items-center gap-16">
-                    <div className="w-full flex justify-end">
+                    <div className="w-full flex flex-col justify-center items-center lg:flex-row lg:justify-between">
+                        <NumberOfData></NumberOfData>
                         <SelectInput></SelectInput>
                     </div>
                     <div className="lg:grid lg:grid-cols-2 lg:gap-10">
@@ -71,6 +75,9 @@ const AvailableFoods = () => {
                         }
                     </div>
                     <Button
+                        variant={ButtonHover}
+                        initial = "hidden"
+                        whilehover= "hover"
                         sx={buttonStyle}
                         onClick={() => { setQuantity(10) }}
                     >
@@ -85,7 +92,11 @@ const AvailableFoods = () => {
                         >
                             Food Categories
                         </Typography>
-                        <CategoryCard></CategoryCard>
+                        {categories.map((data, index) => (
+                            <CategoryCard 
+                            key={index} 
+                            title={data}></CategoryCard>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -1,14 +1,31 @@
 import { Button, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import { useAnimate } from 'framer-motion';
+import { offHoverCardAnimation, offHoverCardNumberAnimation, onHoverCardAnimation, onHoverCardNumberAnimation, } from "../animation/FeaturedFoodDonationsCardAnimation";
 
 const FeaturedFoodDonationsCard = (props) => {
+    const [scope, animate] = useAnimate()
 
-    const {title, description} = props
+    const { title, description } = props
+
+    //Animation Activators
+    const handleCardMouseEnter = () => {
+        animate('#card', onHoverCardAnimation.animation, onHoverCardAnimation.transition);
+        animate('#cardNumber', onHoverCardNumberAnimation.animation, onHoverCardNumberAnimation.transition)
+    }
+    const handleCardMouseExit = () => {
+        animate('#card', offHoverCardAnimation.animation, offHoverCardAnimation.transition);
+        animate('#cardNumber', offHoverCardNumberAnimation.animation, offHoverCardNumberAnimation.transition)
+    }
+
 
     return (
-        <div>
+        <div
+            ref={scope}
+        >
             <Box
+                id='card'
                 sx={{
                     maxWidth: 420, // Set your desired width
                     height: 580, // Set your desired height
@@ -19,8 +36,10 @@ const FeaturedFoodDonationsCard = (props) => {
                     alignItems: 'center',
                     backgroundImage: `url(https://i.ibb.co/Nr4nR5r/nahil-naseer-xljt-GZ2-P3-Y-unsplash.jpg)`,  // Set the image URL here
                     backgroundSize: 'cover',
-                    position: 'relative'
+                    position: 'relative',
                 }}
+                onMouseEnter={handleCardMouseEnter}
+                onMouseLeave={handleCardMouseExit}
             >
                 <Box
                     sx={{
@@ -38,14 +57,15 @@ const FeaturedFoodDonationsCard = (props) => {
                     }}
                 >
                     <Typography
-                    sx={{
-                        fontSize: 90,
-                        fontWright: 800,
-                        position: 'absolute',
-                        left: 35,
-                        top: 5,
-                        opacity: 0.4
-                    }}
+                        id = 'cardNumber'
+                        sx={{
+                            fontSize: 90,
+                            fontWeight: 800,
+                            position: 'absolute',
+                            left: 35,
+                            top: 5,
+                            opacity: 0.4
+                        }}
                     >
                         01
                     </Typography>
@@ -56,13 +76,13 @@ const FeaturedFoodDonationsCard = (props) => {
                         {description}
                     </Typography>
                     <Button
-                    sx={{
-                        color: 'white',
-                        fontSize: 13,
-                        fontWeight: 500
-                    }}
+                        sx={{
+                            color: 'white',
+                            fontSize: 13,
+                            fontWeight: 500
+                        }}
                     >
-                        Read More <ArrowRightAltOutlinedIcon/>
+                        Read More <ArrowRightAltOutlinedIcon />
                     </Button>
                 </Box>
             </Box>

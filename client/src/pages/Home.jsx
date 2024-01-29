@@ -33,21 +33,21 @@ const Home = () => {
                     >
                         Loved Donations
                     </Typography>
-                    <div className="flex flex-col gap-12 lg:flex-row">
-                        {
-                            FeaturedFoodDonationData.data.map((data, index) => {
-                                console.log(data)
-                                return (
-                                    <FeaturedFoodDonationsCard
-                                        key={index}
-                                        title={data.name}
-                                        description={data.description}
-                                    ></FeaturedFoodDonationsCard>
+                        <div className="flex flex-col gap-12 lg:flex-row">
+                            {
+                                FeaturedFoodDonationData.data.map((data, index) => {
+                                    console.log(data)
+                                    return (
+                                        <FeaturedFoodDonationsCard
+                                            key={index}
+                                            title={data.name}
+                                            description={data.description}
+                                        ></FeaturedFoodDonationsCard>
 
-                                )
-                            })
-                        }
-                    </div>
+                                    )
+                                })
+                            }
+                        </div>
                 </div>
             </div>
             <div className="flex flex-col gap-5 px-5">

@@ -8,7 +8,7 @@ const BannerShared = (props) => {
         <div>
             <Box
                 width='100%'
-                height={300}
+                height={150}
                 style={{
                     backgroundImage: 'url("/src/assets/Images/Banner/SharePlateBannerImage.png")',
                     backgroundSize: 'cover',
