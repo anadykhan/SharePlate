@@ -1,6 +1,7 @@
 import { Badge, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { offHoverCardAnimation, onHoverCardAnimation } from "../animation/MyDonationCardAnimation"
+import { useAnimate } from "framer-motion"
 
 const MyDonationsCard = (props) => {
 
@@ -9,7 +10,7 @@ const MyDonationsCard = (props) => {
     const { imageSrc, title, subtitle, badgeContent } = props
 
     const handleMouseEnter = () => {
-        console.log('working')
+        console.log('My donations working')
         animate("#card", onHoverCardAnimation.animate, onHoverCardAnimation.transition)
     }
 
