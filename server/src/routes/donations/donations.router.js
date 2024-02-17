@@ -6,7 +6,7 @@ const donationsRouter = express.Router()
 donationsRouter.get('/', httpGetAllDonations)
 donationsRouter.get('/:id', httpGetSingleDonation)
 donationsRouter.post('/', httpCreateDonation)
-donationsRouter.post('/update', httpUpdateDonation)
+donationsRouter.post('/updatedonation', httpUpdateDonation)
 donationsRouter.delete('/', httpDeleteDonation)
 
 module.exports = donationsRouter

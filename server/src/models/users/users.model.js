@@ -16,8 +16,30 @@ async function createUser(user) {
     await newUser.save()
 }
 
+async function updateUser(user) {
+    await users
+        .findByIdAndUpdate(
+            user._id,
+            {
+                $set: user,
+            },
+            {
+                new: true,
+            }
+        )
+}
+
+async function deleteUser(user) {
+    await users
+        .findByIdAndDelete(
+            user._id
+        )
+}
+
 module.exports = {
     getAllUsers,
     getSingleUser,
-    createUser
+    createUser,
+    updateUser,
+    deleteUser
 }
