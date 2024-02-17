@@ -1,5 +1,5 @@
 const donations = require('./../../models/donations/donations.mongo')
-const {getAllDonations, createDonation, getSingleDonation, updateDonation} = require('./../../models/donations//donations.model')
+const {getAllDonations, createDonation, getSingleDonation, updateDonation, deleteDonation} = require('./../../models/donations//donations.model')
 
 async function httpGetAllDonations (req, res) {
     const donations = await getAllDonations()
@@ -42,9 +42,22 @@ async function httpUpdateDonation (req, res) {
     }
 }
 
+async function httpDeleteDonation (req, res) {
+    if (!req.body._id) {
+        res.status(500).json({ msg: "provide an Article _id" })
+    }
+    try {
+        await deleteDonation(req.body)
+        return res.status(200).json("Donation has been deleted")
+    } catch (err) {
+        return res.status(500).json(err)
+    }
+}
+
 module.exports = {
     httpGetAllDonations,
     httpGetSingleDonation,
     httpCreateDonation,
-    httpUpdateDonation
+    httpUpdateDonation,
+    httpDeleteDonation
 }

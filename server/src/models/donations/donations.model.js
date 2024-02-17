@@ -17,7 +17,7 @@ async function createDonation (donation) {
 }
 
 async function updateDonation (donation) {
-    return await donations
+    await donations
     .findByIdAndUpdate(
         donation._id,
         {
@@ -29,9 +29,17 @@ async function updateDonation (donation) {
     )
 }
 
+async function deleteDonation (donation) {
+    await donations
+    .findByIdAndDelete(
+        donation._id
+    )
+}
+
 module.exports = {
     getAllDonations,
     getSingleDonation,
     createDonation,
-    updateDonation
+    updateDonation,
+    deleteDonation
 }
