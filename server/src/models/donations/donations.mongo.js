@@ -13,6 +13,14 @@ const donationsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    quantity: {
+        type: Number,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true

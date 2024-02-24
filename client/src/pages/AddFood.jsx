@@ -25,14 +25,26 @@ const AddFood = () => {
         const image = form.image.value
         const quantity = form.quantity.value
         const address = form.address.value 
-        const date = form.date.value 
+        const expireDate = form.date.value 
         const notes = form.notes.value
-        const donorName = form.donorName.value
-        const donorEmail = form.donorEmail.value
-        const donorImage = form.donorImage.value
+        const donorID = "3sflkjds3sdfk" 
         const status = form.status.value
+        const likes = []
 
-        //console.log(name, image, quantity, address, date, notes, donorName, donorEmail, donorImage, status)
+        const newDonation = {
+            expireDate,
+            donorID,
+            status,
+            quantity,
+            address,
+            name,
+            notes,
+            likes,
+        }
+
+        console.log(newDonation)
+
+        
     }
 
     return (
@@ -57,7 +69,7 @@ const AddFood = () => {
                 />
                 <TextField
                     id="outlined-number"
-                    label="Number"
+                    label="Quantity"
                     type="number"
                     InputLabelProps={{
                         shrink: true,
@@ -74,7 +86,7 @@ const AddFood = () => {
                 />
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
-                        label="Select Date"
+                        label="Select Expiration Date"
                         inputFormat="MM/dd/yyyy"
                         value={selectedDate}
                         onChange={(date) => handleDateChange(date)}
@@ -92,46 +104,7 @@ const AddFood = () => {
                 />
                 <TextField
                     id="outlined-basic"
-                    label="Donator Name"
-                    variant="outlined"
-                    value ='Donator name'
-                    inputProps={
-                        {
-                            readOnly: true,
-                        }
-                    }
-                    sx={textInputStyle}
-                    name="donorName"
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="Donator email"
-                    variant="outlined"
-                    value = 'Donator email'
-                    inputProps={
-                        {
-                            readOnly: true,
-                        }
-                    }
-                    sx={textInputStyle}
-                    name="donorEmail"
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="Donator Image"
-                    variant="outlined"
-                    value='Donator image'
-                    inputProps={
-                        {
-                            readOnly: true,
-                        }
-                    }
-                    sx={textInputStyle}
-                    name="donorImage"
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="Available"
+                    label="Availability"
                     variant="outlined"
                     value='Available'
                     inputProps={
