@@ -25,7 +25,7 @@ const donationsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    notes: {
         type: String,
         required: true
     },
