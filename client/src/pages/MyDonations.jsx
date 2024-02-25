@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import BannerShared from "../components/BannerShared"
 import RequestedDonationsCard from "../components/RequestedDonationsCard"
-import { cardLoadAnimation } from "../animation/MyDonationsAnimation"
 import { useAnimate } from "framer-motion";
 import NumberOfData from "../components/NumberOfData";
 import SelectInput from "../components/SelectInput";
@@ -13,11 +12,6 @@ const MyDonations = () => {
     const [scope, animate] = useAnimate()
     const [loadData, setLoadNumber] = useState(4)
 
-    useEffect(() => {
-        animate(
-            '#container', cardLoadAnimation.animation, cardLoadAnimation.transition
-        );
-    }, []);
 
     const handleButtonClick = () => {
         setLoadNumber(loadData + 4)

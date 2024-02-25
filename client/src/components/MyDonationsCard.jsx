@@ -1,6 +1,6 @@
 import { Badge, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
-import { offHoverCardAnimation, onHoverCardAnimation } from "../animation/MyDonationCardAnimation"
+import { offHoverCardAnimation, onHoverCardAnimation } from "../animation/MyDonation/MyDonationCardAnimation"
 import { useAnimate } from "framer-motion"
 
 const MyDonationsCard = (props) => {

@@ -4,9 +4,11 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from "react";
 import BannerShared from "../components/BannerShared"
+import { usePostDonation } from "../hooks/Donations/DonationsHooks";
 
 const AddFood = () => {
     const [selectedDate, handleDateChange] = useState(null);
+    const {mutate:addDonation} = usePostDonation()
 
     const buttonStyle = {
         width: '9rem',
@@ -21,26 +23,28 @@ const AddFood = () => {
 
         const form = event.target;
 
-        const name = form.name.value
+        const title = form.name.value
         const image = form.image.value
         const quantity = form.quantity.value
         const address = form.address.value 
         const expireDate = form.date.value 
         const notes = form.notes.value
-        const donorID = "3sflkjds3sdfk" 
+        const userID = "3sflkjds3sdfk" 
         const status = form.status.value
         const likes = []
 
         const newDonation = {
             expireDate,
-            donorID,
+            userID,
             status,
             quantity,
             address,
-            name,
+            title,
             notes,
             likes,
         }
+
+        addDonation(newDonation)
 
         console.log(newDonation)
 
@@ -116,8 +120,13 @@ const AddFood = () => {
                     name="status"
                 />
                 <Button
-                    variant="contained"
-                    sx={buttonStyle}
+                    sx={{
+                        width: '10rem',
+                        background: '#e8b941',
+                        color: 'white',
+                        borderRadius: 0,
+                        padding: 2,
+                    }}
                     type="submit"
                 >Share</Button>
             </form>
